@@ -17,6 +17,11 @@ MRuby::Build.new do |conf|
   #   g.cc.flags << '-g' # append cflags in this gem
   # end
   # conf.gem 'examples/mrbgems/c_and_ruby_extension_example'
+  conf.gem 'examples/mrbgems/my_c_and_ruby_extension_example' do |g|
+    g.cc.flags << '-g' # append cflags in this gem
+  end
+  conf.gem 'examples/mrbgems/my_c_and_ruby_extension_example'
+
   # conf.gem :core => 'mruby-eval'
   # conf.gem :mgem => 'mruby-io'
   # conf.gem :github => 'iij/mruby-io'
