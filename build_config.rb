@@ -26,6 +26,7 @@ MRuby::Build.new do |conf|
   # conf.gem :mgem => 'mruby-io'
   # conf.gem :github => 'iij/mruby-io'
   # conf.gem :git => 'git@github.com:iij/mruby-io.git', :branch => 'master', :options => '-v'
+  conf.gem :git => 'git@github.com:masa-koz/mruby-example_by_template.git', :branch => 'master', :options => '-v'
 
   # include the default GEMs
   conf.gembox 'default'
