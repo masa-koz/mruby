@@ -9,7 +9,7 @@ MRuby::Build.new do |conf|
   end
 
   # Turn on `enable_debug` for better debugging
-  # enable_debug
+  enable_debug
 
   # Use mrbgems
   # conf.gem 'examples/mrbgems/ruby_extension_example'
@@ -26,6 +26,9 @@ MRuby::Build.new do |conf|
   # conf.gem :mgem => 'mruby-io'
   # conf.gem :github => 'iij/mruby-io'
   # conf.gem :git => 'git@github.com:iij/mruby-io.git', :branch => 'master', :options => '-v'
+  conf.gem 'build/mrbgems/mruby-example_by_template' do |g|
+    g.cc.flags << '-g' # append cflags in this gem
+  end
   conf.gem :git => 'git@github.com:masa-koz/mruby-example_by_template.git', :branch => 'master', :options => '-v'
 
   # include the default GEMs
